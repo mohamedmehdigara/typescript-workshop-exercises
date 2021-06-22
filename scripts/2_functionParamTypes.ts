@@ -6,12 +6,12 @@
  * 'message' parameter to 'string'.
  */
 
-const log = (message): void => {
+const log = (message: string): void => {
   console.log(`Your message is: ${message}`);
-}
+};
 
 export const script = (): void => {
-  const message = 'Hello world!';
+  const message = "Hello world!";
   log(message);
-}
+};
 script();

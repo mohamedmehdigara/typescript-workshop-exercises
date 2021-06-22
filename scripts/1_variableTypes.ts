@@ -16,11 +16,11 @@
  */
 
 export const script = (): void => {
-  const numA = '6';
+  const numA = 6;
   const numB = 12;
 
   const sum: number = numA + numB;
 
-  console.log('The sum is', sum);
-}
+  console.log("The sum is", sum);
+};
 script();

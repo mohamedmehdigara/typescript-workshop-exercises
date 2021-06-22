@@ -14,17 +14,17 @@
  * Note that an array type looks like this: <array element type>[]
  */
 
-
-const newArray = (length: number, populateWith: number): void => {
+const newArray = (length: number, populateWith: number): number[] => {
   const arr = new Array(length);
   for (let i = 0; i < length; i++) {
     arr[i] = populateWith;
   }
   return arr;
-}
+};
 
-export const script = (): void => {
-  const totals: number[] = newArray(5, 0)
-  console.log('totals', totals);
-}
+export const script = (): number[] => {
+  const totals: number[] = newArray(5, 0);
+  console.log("totals", totals);
+  return totals;
+};
 script();

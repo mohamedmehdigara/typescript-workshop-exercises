@@ -14,16 +14,15 @@
  * it is being used with
  */
 
-type AsStringType = undefined;
+type AsStringType = string | number | boolean;
 
- const asString = (input: AsStringType): string => {
-   return `${input}`;
- }
+const asString = (input: AsStringType): string => {
+  return `${input}`;
+};
 
 export const script = (): void => {
-  console.log('Wolverine:', asString('a man of many talons'))
-  console.log('Number as a string:', asString(123))
-  console.log('Boolean as a string:', asString(true))
-}
+  console.log("Wolverine:", asString("a man of many talons"));
+  console.log("Number as a string:", asString(123));
+  console.log("Boolean as a string:", asString(true));
+};
 script();
-
