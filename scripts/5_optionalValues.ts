@@ -16,7 +16,7 @@
 
 
 const log = (message: string): void => {
-  const formattedMessage = `DEBUG: ${message}`;
+  const formattedMessage = `ERROR: ${message}`;
   console.log(formattedMessage);
 }
 
@@ -26,7 +26,7 @@ export const script = (): void => {
   if (rand > 0.5) {
     log('Number is in a reasonable range');
   } else {
-    log('Number is less than 0.5', true);
+    log('Number is less than 0.5');
   }
 }
 script();
