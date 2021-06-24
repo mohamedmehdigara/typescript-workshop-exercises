@@ -15,17 +15,21 @@
 
 interface Grocery {
   price: number;
+  type: string;
+}
+interface Milk extends Grocery {
+  type: string;
 }
 
 const getMilkTypeAndPrice = (milk: Milk): string =>
-  `Is lite? ${milk.type === 'lite'}, Price: ${milk.price}`;
+  `Is lite? ${milk.type === "lite"}, Price: ${milk.price}`;
 
 const run = (): void => {
   const milk: Grocery = {
-    price: 3.50,
-    type: 'full cream',
-  }
+    price: 3.5,
+    type: "full cream",
+  };
 
   console.log(getMilkTypeAndPrice(milk));
-}
+};
 run();
