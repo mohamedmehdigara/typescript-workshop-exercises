@@ -11,29 +11,30 @@ interface Car {
   make: string;
   model: string;
   automatic?: boolean;
+  towingCapacity?: number;
 }
 
 const logCarInfo = (car: Car): void => {
-  console.log(`This is a ${car.colour} ${car.make} ${car.model}.`)
-}
+  console.log(`This is a ${car.colour} ${car.make} ${car.model}.`);
+};
 
 const script = (): void => {
   const myCar: Car = {
-    colour: 'green',
-    make: 'Toyota',
-    model: 'Corolla',
+    colour: "green",
+    make: "Toyota",
+    model: "Corolla",
     automatic: true,
-  }
+  };
 
   logCarInfo(myCar);
 
   const cybertruck: Car = {
-    colour: 'silver',
-    make: 'Tesla',
-    model: 'Cybertruck',
+    colour: "silver",
+    make: "Tesla",
+    model: "Cybertruck",
     towingCapacity: 7500,
-  }
+  };
 
   logCarInfo(cybertruck);
-}
+};
 script();
