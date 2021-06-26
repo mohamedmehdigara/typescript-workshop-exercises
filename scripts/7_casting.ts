@@ -22,17 +22,28 @@
  *
  */
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 type Month = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
-
-
 
 const monthToStr = (num: Month): string => {
   return months[num];
-}
+};
 
 export const script = (): void => {
-  const randomlyGeneratedMonth = Math.floor(Math.random() * 12);
-  console.log('The month is:', monthToStr(randomlyGeneratedMonth));
-}
+  const randomlyGeneratedMonth = Math.floor(Math.random() * 12) as Month;
+  console.log("The month is:", monthToStr(randomlyGeneratedMonth));
+};
 script();
