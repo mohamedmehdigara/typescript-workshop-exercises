@@ -20,24 +20,29 @@ enum ModeOfTransport {
   Unicorn = 5,
 }
 
-const getMode = (modeName: string): ModeOfTransport|undefined => {
-  switch(modeName.toLowerCase()) {
+const getMode = (modeName: string): ModeOfTransport | undefined => {
+  switch (modeName.toLowerCase()) {
     default: {
-      return undefined;
+      return ModeOfTransport.Walking;
     }
   }
-}
+};
 
 export const script = (): void => {
-  const waysIGotToWorkThisWeek = ['Walking', 'car', 'bus', 'unicorn', 'cycling'];
+  const waysIGotToWorkThisWeek = [
+    "Walking",
+    "car",
+    "bus",
+    "unicorn",
+    "cycling",
+  ];
 
-  const enumModes = waysIGotToWorkThisWeek.map(m => getMode(m));
+  const enumModes = waysIGotToWorkThisWeek.map((m) => getMode(m));
 
-  enumModes.forEach(mode => {
+  enumModes.forEach((mode) => {
     if (mode === ModeOfTransport.Walking || mode === ModeOfTransport.Cycling) {
-      console.log('Got some exercise');
+      console.log("Got some exercise");
     }
-  })
-}
+  });
+};
 script();
-
